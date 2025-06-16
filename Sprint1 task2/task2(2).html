@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task2(ii)</title>
+  <style>
+    .container {
+      width: 400px;
+      margin: 20px auto;
+      border: 1px solid black;
+    }
+
+    .section {
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+
+    .content-area {
+      display: flex;
+      height: 100px;
+      border-bottom: 1px solid black;
+    }
+
+    .left, .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left {
+      width: 30%;
+      border-right: 1px solid black;
+    }
+
+    .right {
+      width: 70%;
+    }
+
+    .inline-text {
+      display: inline;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="section">
+      <span class="inline-text">Header Section</span>
+    </div>
+
+    <div class="section">
+      <span class="inline-text">Navigation Bar</span>
+    </div>
+
+    <div class="content-area">
+      <div class="left">
+        <span class="inline-text">Index</span>
+      </div>
+      <div class="right">
+        <span class="inline-text">Content section</span>
+      </div>
+    </div>
+
+    <div class="section" style="border-bottom: none;">
+      <span class="inline-text">Footer Section</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
