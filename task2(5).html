@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task2(5)</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #ccc;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "title title"
+        "nav nav"
+        "intro intro"
+        "main sidebar"
+        "footer footer";
+      grid-template-columns: 2fr 1fr;
+      gap: 10px;
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 10px;
+    }
+    
+
+    .box {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .title    { grid-area: title; background: #222; width:150px; }
+    .nav      { grid-area: nav; background: #444; height:10px; }
+    .intro    { grid-area: intro; background: #555; }
+    .main     { grid-area: main; background: #111; }
+    .sidebar  { grid-area: sidebar; background: #999; }
+    .footer   { grid-area: footer; background: #444; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box title">Page title</div>
+    <div class="box nav">Navigation</div>
+    <div class="box intro">Introduction</div>
+    <div class="box main">Main content area</div>
+    <div class="box sidebar">Sidebar</div>
+    <div class="box footer">Footer</div>
+  </div>
+
+</body>
+</html>

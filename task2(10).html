@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complex Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "nav"
+        "slideshow"
+        "cards"
+        "footer";
+      gap: 10px;
+      padding: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 400px;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .nav {
+      grid-area: nav;
+      background-color: #aaa;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .slideshow {
+      grid-area: slideshow;
+      background-color: #635f5f;
+      color: rgb(162, 161, 161);
+      padding: 30px;
+      text-align: center;
+    }
+
+    .cards {
+      grid-area: cards;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: #aaa;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border: 1px solid #ccc;
+      text-align: center;
+      height: 100px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="nav">Navigation Bar</div>
+    <div class="slideshow">Slideshow</div>
+    <div class="cards">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>
