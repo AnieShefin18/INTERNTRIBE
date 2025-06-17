@@ -1,0 +1,9 @@
+let result = 0;
+result += 10; 
+console.log("After addition (+= 10): " + result);
+result -= 3; 
+console.log("After subtraction (-= 3): " + result);
+result *= 2; 
+console.log("After multiplication (*= 2): " + result);
+result /= 4;
+console.log("After division (/= 4): " + result);
