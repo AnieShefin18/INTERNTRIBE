@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task2-1</title>
+</head>
+<body>
+  <script>
+    var arr1 = [0, -7, 6, -1, 8, 4];
+    var arr2 = [65, 24, 99, 10, 16, 7];
+
+    
+    function NegativeNumber(arr) {
+      var result = [];
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+          result.push(arr[i]);
+        }
+      }
+      return result;
+    }
+
+    
+    function odd(arr) {
+      var oddNumbers = [];
+      for (var j = 0; j < arr.length; j++) {
+        if (arr[j] % 2 !== 0) {
+          oddNumbers.push(arr[j]);
+        }
+      }
+      return oddNumbers;
+    }
+
+    
+    console.log("Negative numbers are:", NegativeNumber(arr1));
+    console.log("Odd numbers are:", odd(arr2));
+  </script>
+</body>
+</html>

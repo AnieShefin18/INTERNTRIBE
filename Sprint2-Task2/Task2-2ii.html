@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task2-2(ii)</title>
+</head>
+<body>
+    <script>
+        let ageInput = prompt("Enter your age:");
+        let age = Number(ageInput);
+
+        if (isNaN(age) || age < 0) {
+            console.log("Invalid age entered.");
+        } else {
+            if (age < 16) {
+                console.log("You can't drive.");
+            } else if (age >= 16 && age <= 17) {
+                console.log("You can drive but not vote.");
+            } else if (age >= 18 && age <= 24) {
+                console.log("You can vote but not rent a car.");
+            } else {
+                console.log("You can do pretty much anything.");
+            }
+        }
+    </script>
+</body>
+</html>

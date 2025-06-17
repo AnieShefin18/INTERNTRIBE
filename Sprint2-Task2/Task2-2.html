@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task2-2(i)</title>
+</head>
+<body>
+   
+    <script>
+        let sum = 0;
+        let num;
+
+        do {
+            let input = prompt("Enter an integer (enter 0 to stop):");
+            num = Number(input);
+
+            if (!isNaN(num)) {
+                sum += num;
+            } else {
+                console.log("Invalid input, please enter a number.");
+            }
+        } while (num !== 0);
+
+        console.log("Total Sum:", sum);
+    </script>
+</body>
+</html>
