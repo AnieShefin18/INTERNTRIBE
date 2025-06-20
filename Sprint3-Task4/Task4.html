@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <style>
+        body
+        {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/BlankMap-World_gray.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .div1
+        {
+            display: flex;
+            flex-direction: row
+        }
+        .board
+        {
+            background-color: rgb(93, 215, 255);
+            width: 70%;
+            border-radius: 20px;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-left: 100px;
+            opacity: 85%;
+        }
+        .london
+        {
+            background-color: navy;
+            width: 30%;
+            color: white;
+            border-radius: 20px;
+            opacity: 70%;
+            padding-top: 20px;
+            padding-left: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-left: 10px dotted rgb(243, 239, 239);
+ 
+        }
+        .b1
+        {
+            display: flex;
+            flex-direction: row;
+            border-right: 10px dotted rgb(243, 239, 239);
+            padding-right: 200px;
+            border-radius: 7px;
+        }
+        .bar1 img
+        {
+            height: 400px;
+            padding-left: 20px;
+            padding-top:5px;
+            padding-right: 20px;
+        }
+        .b1ab
+        {
+            display: flex;
+            flex-direction: column;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .b1ab
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .b1abc
+        {
+            padding: 30px;
+        }
+         .b1av
+        {
+            padding-right: 120px;
+            padding-top: 40px;
+        }
+        #tag
+        {
+          font-size: 40px;
+          padding-left: 30px;
+        }
+        .b1av h5
+        {
+            color: red;
+        }
+         h5
+        {
+            color: rgb(118, 117, 117);
+        }
+        .div2
+        {
+            display: flex;
+            flex-direction: row;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .b2
+        {
+            padding-left: 20px;
+        }
+        #bar2 img
+        {
+           width: 300px; 
+           height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <div class="board">
+                <h1>BOARDING PASS</h1>
+                <h4>AIRLINE COMPANY</h4>
+            </div>
+            <div class="london"><h2>LONDON ✈ TOKYO</h2></div>
+        </div>
+        <div class="div2">
+            <div class="b1">
+                <div class="bar1">
+                    <img src="bar1.avif" alt="Barcode image">
+                </div>
+                <div class="b1a">
+                    <div class="b1ab">
+                        <div class="b1abc">
+                            <h5>PASSENGER</h5>
+                            <h2>JOHN DOE</h2>
+                        </div>
+                        <div class="b1abc">
+                            <h5>FLIGHT</h5>
+                            <h2>AV 1A7</h2>
+                        </div>
+                        <div class="b1abc">
+                            <h5>DATE</h5>
+                            <h2>27 JUN 2022</h2>
+                        </div>
+                        <div class="b1abc">
+                            <h5>SEAT</h5>
+                            <h2>4B</h2>
+                        </div>
+                    </div>
+                    <div class="b1ab">
+                        <h1 id="tag">LONDON ✈ TOKYO</h1>
+                    </div>
+                    <div class="b1ii">
+                        <div class="b1av">
+                            <h5>GATE</h5>
+                            <h2>25A</h2>
+                        </div>
+                        <div class="b1av">
+                            <h5>BOARDING TIME</h5>
+                            <h2>6.30</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b2">
+                <div>
+                     <h5>PASSENGER</h5>
+                     <h2>JOHN DOE</h2>
+                </div>
+                <div>
+                    <h5>FLIGHT</h5>
+                    <h2>AV 1A7</h2>
+                </div>
+                <div>
+                     <h5>DATE</h5>
+                     <h2>27 JUN 2022</h2>
+                </div>
+                <div>
+                    <h5>SEAT</h5>
+                    <h2>4B</h2>
+                </div>
+                <div id="bar2">
+                    <img src="bar2.jpg" alt="Barcode image">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
