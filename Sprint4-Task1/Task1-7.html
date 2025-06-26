@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1-7</title>
+    <style>
+        div
+        {
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseenter="display1()" onmouseleave="display2()"></div>
+    <h2 id="task7"></h2>
+</body>
+<script>
+    function display1()
+    {
+        const value1=document.getElementById("task7");
+        value1.innerHTML="Mouse entered!!";
+    }
+    function display2()
+    {
+        const value2=document.getElementById("task7");
+        value2.innerHTML="Mouse left!!";
+    }
+</script>
+</html>
