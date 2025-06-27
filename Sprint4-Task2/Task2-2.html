@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2-2</title>
+</head>
+<body>
+  <center>
+    <h1 class="one">Frontend Development</h1>
+    <h1 class="two">Frontend Development</h1>
+    <h1 class="two">Frontend Development</h1>
+    <h1 class="one">Frontend Development</h1>
+    <p id="ptag"></p>
+    <button onclick="display()">Tap Here</button>
+    </center>
+</body>
+     <script>
+        var btn=document.querySelector("button");
+        function display()
+        {
+          btn.style.border="none";
+          btn.style.backgroundColor="plum";
+          btn.style.padding="10px 20px";
+          btn.style.color="white";
+          btn.style.borderRadius="10px";
+          var head1=document.querySelectorAll(".one")
+          head1[0].style.backgroundColor="brown";
+          head1[0].style.color="White";
+          head1[0].style.fontFamily="sans-serif";
+          head1[1].style.backgroundColor="brown";
+          head1[1].style.color="White";
+          head1[1].style.fontFamily="sans-serif";
+          var head2=document.querySelectorAll(".two");
+          head2[0].style.backgroundColor="Plum";
+          head2[0].style.color="white";
+          head2[0].style.fontFamily="Lucida";
+          head2[1].style.backgroundColor="Plum";
+          head2[1].style.color="white";
+          head2[1].style.fontFamily="Lucida";
+          var pt=document.getElementById("ptag");
+          pt.innerHTML="HTML, CSS, JavaScript"
+        }
+      </script>
+      
+</html>
