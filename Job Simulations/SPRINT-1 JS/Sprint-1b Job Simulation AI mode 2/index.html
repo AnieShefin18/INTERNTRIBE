@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neflix - Premium Streaming Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: #000;
+            color: #fff;
+        }
+        
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            height: 100vh;
+            padding: 20px 50px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 150px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid #777;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .signin-btn {
+            background: #e50914;
+            color: white;
+            border: none;
+        }
+        
+        .header-content {
+            text-align: center;
+            margin-top: 150px;
+        }
+        
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .email-signup {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .email-signup input {
+            padding: 15px;
+            width: 400px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .email-signup button {
+            background: #e50914;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            padding: 0 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .features {
+            padding: 50px 10%;
+            border-top: 8px solid #222;
+        }
+        
+        .feature-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        
+        .text-col {
+            flex: 1;
+            padding: 0 50px;
+        }
+        
+        .text-col h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .text-col p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+        
+        .img-col {
+            flex: 1;
+        }
+        
+        .img-col img {
+            width: 100%;
+        }
+        
+        .faq {
+            padding: 50px 10%;
+            text-align: center;
+            border-top: 8px solid #222;
+        }
+        
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+        
+        .accordion-header {
+            background: #303030;
+            padding: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .accordion-content {
+            background: #303030;
+            padding: 20px;
+            margin-top: 2px;
+            text-align: left;
+            display: none;
+        }
+        
+        .accordion-content.show {
+            display: block;
+        }
+        
+        .footer {
+            padding: 50px 10%;
+            color: #777;
+            border-top: 8px solid #222;
+        }
+        
+        .footer h2 {
+            margin-bottom: 30px;
+        }
+        
+        .footer-cols {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .footer a {
+            color: #777;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 20px;
+            }
+            
+            .feature-row {
+                flex-direction: column;
+            }
+            
+            .text-col {
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            .email-signup {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .email-signup input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="images/logo.png" alt="StreamVista Logo" class="logo">
+            <div class="nav-buttons">
+                <button class="btn lang-btn">
+                    <i class="fas fa-globe"></i> English <i class="fas fa-caret-down"></i>
+                </button>
+                <button class="btn signin-btn">Sign In</button>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <form class="email-signup">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Get Started <i class="fas fa-chevron-right"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature-row">
+            <div class="text-col">
+                <h2>Enjoy on your TV</h2>
+                <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div class="img-col">
+                <img src="images/feature-1.png" alt="TV display">
+            </div>
+        </div>
+        
+        <div class="feature-row">
+            <div class="img-col">
+                <img src="images/feature-2.png" alt="Mobile device">
+            </div>
+            <div class="text-col">
+                <h2>Download your shows to watch offline</h2>
+                <p>Save your favorites easily and always have something to watch.</p>
+            </div>
+        </div>
+        
+        <div class="feature-row">
+            <div class="text-col">
+                <h2>Watch everywhere</h2>
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+            <div class="img-col">
+                <img src="images/feature-3.png" alt="Multiple devices">
+            </div>
+        </div>
+        
+        <div class="feature-row">
+            <div class="img-col">
+                <img src="images/feature-4.png" alt="Kids profile">
+            </div>
+            <div class="text-col">
+                <h2>Create profiles for kids</h2>
+                <p>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>What is Netflix?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>How much does Netflix cost?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Where can I watch?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>How do I cancel?</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees - start or stop your account anytime.</p>
+                </div>
+            </div>
+        </div>
+        
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <form class="email-signup">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Get Started <i class="fas fa-chevron-right"></i></button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <h2>Questions? Call 000-000-000 NETFLIX</h2>
+        <div class="footer-cols">
+            <div class="col">
+                <a href="#">FAQ</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Corporate Information</a>
+            </div>
+            <div class="col">
+                <a href="#">Help Center</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <a href="#">Account</a>
+                <a href="#">Redeem Gift Cards</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+            <div class="col">
+                <a href="#">Media Center</a>
+                <a href="#">Buy Gift Cards</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Legal Notices</a>
+            </div>
+        </div>
+        
+        <button class="btn lang-btn">
+            <i class="fas fa-globe"></i> English <i class="fas fa-caret-down"></i>
+        </button>
+        
+        <p class="copyright">Netflix United States</p>
+    </div>
+
+    <script>
+        // Accordion functionality
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+                
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                } else {
+                    content.classList.add('show');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
