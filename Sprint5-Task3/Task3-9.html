@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task3-9</title></head>
+<body>
+<script>
+const tasks = [
+  { taskName: 'Task3-1', dueDate: '2025-06-01' },
+  { taskName: 'Task3-2', dueDate: '2024-05-01' },
+  { taskName: 'Task3-3', dueDate: '2024-01-01' }
+];
+
+const today = new Date().toISOString().split('T')[0];
+const overdue = tasks.find(task => task.dueDate < today);
+
+console.log("Overdue task:", overdue);
+</script>
+</body>
+</html>

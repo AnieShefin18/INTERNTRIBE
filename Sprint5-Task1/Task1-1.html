@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task1-1</title>
+  </head>
+  <body>
+    <script>
+      function squareNumbers(numbers) {
+        let result = [];
+        for (let i = 0; i < numbers.length; i++) {
+          result.push(numbers[i] * numbers[i]);
+        }
+        return result;
+      }
+      const squareNumbersArrow = (numbers) => numbers.map((num) => num * num);
+      const input = [1, 2, 3, 4, 5];
+
+      console.log("Traditional Function Output:", squareNumbers(input));
+      console.log("Arrow Function Output:", squareNumbersArrow(input));
+    </script>
+  </body>
+</html>

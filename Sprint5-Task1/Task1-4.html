@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task1-4</title>
+  </head>
+  <body>
+    <!-- Add this div to show the result -->
+    <div id="output"></div>
+
+    <script>
+      // Array with duplicate numbers
+      const numbers = [1, 2, 2, 3, 4, 4, 5];
+
+      // Using Set to filter out duplicates
+      const uniqueNumbers = [...new Set(numbers)];
+
+      // Displaying the unique numbers in the browser
+      document.getElementById("output").textContent =
+        "Unique numbers: " + uniqueNumbers.join(", ");
+    </script>
+  </body>
+</html>

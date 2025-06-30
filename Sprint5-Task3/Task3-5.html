@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task3-5</title></head>
+<body>
+<script>
+const cart = [
+  { item: 'Backpacks', price: 2000 },
+  { item: 'Tshirts', price: 500 },
+  { item: 'Trouser Pants', price: 1500 },
+  { item: 'Watch', price: 9000 },
+  { item: 'Shoes', price: 1500 },
+  { item: 'Dress', price: 2000 }
+];
+
+const total = cart.reduce((sum, item) => sum + item.price, 0);
+console.log("Total cart price:", total);
+</script>
+</body>
+</html>

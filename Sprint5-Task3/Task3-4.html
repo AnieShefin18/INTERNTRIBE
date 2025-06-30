@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task3-4</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        { name: "Anie", age: 20 },
+        { name: "Abisha", age: 25 },
+        { name: "Antony Vinfred Reshma ", age: 21 },
+        { name: "Amie Sherin", age: 25 },
+        { name: "Ameera Fathima", age: 22 },
+        { name: "Barthipa ", age: 21 },
+        { name: "Fenina Rexin", age: 25 },
+        { name: "Evangeline Rose", age: 22 },
+      ];
+
+      const groupBy = (arr, prop) =>
+        arr.reduce((acc, obj) => {
+          const key = obj[prop];
+          if (!acc[key]) acc[key] = [];
+          acc[key].push(obj);
+          return acc;
+        }, {});
+
+      console.log("Grouped by age:", groupBy(people, "age"));
+    </script>
+  </body>
+</html>

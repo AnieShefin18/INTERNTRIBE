@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task3-3</title></head>
+<body>
+<script>
+const items = ['Dove', 'Fingers', 'Dove', 'African lovebirds', 'Peacock', 'Dove'];
+const count = items.reduce((acc, item) => {
+  acc[item] = (acc[item] || 0) + 1;
+  return acc;
+}, {});
+console.log("Word occurrences:", count);
+</script>
+</body>
+</html>

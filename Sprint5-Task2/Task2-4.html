@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task2-4</title></head>
+<body>
+<script>
+  function safeDivide(a, b) {
+    try {
+      if (b === 0) throw "Division by zero is not allowed.";
+      console.log(a / b);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  safeDivide(6, 3); 
+  safeDivide(6, 0); 
+</script>
+</body>
+</html>
