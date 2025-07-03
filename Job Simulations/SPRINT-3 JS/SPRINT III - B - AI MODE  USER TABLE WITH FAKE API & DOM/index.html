@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="user-table-container">
+    <h1>User Table</h1>
+
+    <div class="controls">
+      <button id="fetchBtn" class="fetch-btn">Fetch Users</button>
+      <input type="text" id="searchInput" placeholder="🔍 Search by name or email..." />
+    </div>
+
+    <div id="loader" class="loader"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th data-field="name">Name ⬍</th>
+          <th data-field="username">Username ⬍</th>
+          <th data-field="email">Email ⬍</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

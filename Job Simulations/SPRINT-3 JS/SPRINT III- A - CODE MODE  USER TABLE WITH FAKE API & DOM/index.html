@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sprint-3 JS2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="user-table-container">
+    <h1>User Database</h1>
+
+    <div class="controls">
+      <button onclick="fetchUsers()" class="fetch-btn">Fetch Users</button>
+      <input type="text" id="searchInput" placeholder="🔍 Search by name or email..." />
+    </div>
+
+    <div id="loader" class="loader"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th onclick="sortTable('name')">Name ⬍</th>
+          <th onclick="sortTable('username')">Username ⬍</th>
+          <th onclick="sortTable('email')">Email ⬍</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

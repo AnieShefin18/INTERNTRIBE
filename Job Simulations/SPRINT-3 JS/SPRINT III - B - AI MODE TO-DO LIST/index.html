@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="to do.png">
+</head>
+
+<body>
+    <div class="todo-container">
+        <!-- Header Section -->
+        <header class="todo-header">
+            <h1 class="todo-title">Todo List</h1>
+            <div class="todo-input-group">
+                <input id="todo-input" type="text" placeholder="📑 Add your todo here.." class="todo-input" />
+                <button id="add-button" class="todo-add-btn">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Delete Controls -->
+        <div class="todo-controls">
+            <button id="delete-selected" class="todo-btn-delete-selected">Delete Selected</button>
+            <button id="delete-all" class="todo-btn-delete-all">Delete All</button>
+        </div>
+
+        <!-- Todo List -->
+        <ul id="all-todos" class="todo-list"></ul>
+
+        <!-- Filters Section -->
+        <div class="todo-footer">
+            <div class="todo-filter-dropdown">
+                <button class="filter-btn">Filter</button>
+                <div class="filter-options">
+                    <a href="#" id="all">All</a>
+                    <a href="#" id="rem">Pending</a>
+                    <a href="#" id="com">Completed</a>
+                </div>
+            </div>
+            <div class="todo-status">
+                <p>Completed: <span id="c-count">0</span></p>
+            </div>
+            <div class="todo-status">
+                <p>Total Tasks: <span id="r-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
