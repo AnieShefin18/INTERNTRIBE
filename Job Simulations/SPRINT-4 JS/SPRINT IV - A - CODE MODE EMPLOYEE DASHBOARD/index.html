@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sprint-4 JS-1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Employee Management Dashboard💼</h1>
+  </header>
+
+  <section class="controls-panel">
+    <input type="text" id="searchInput" placeholder="Search by name" />
+    <select id="departmentFilter">
+      <option value="">All Departments</option>
+      <option value="HR">HR</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Sales">Sales</option>
+    </select>
+    <button onclick="convertNamesToUppercase()">Uppercase Names</button>
+    <button onclick="calculateAverageSalary()">Average Salary</button>
+    <button onclick="resetTable()">Reset Table</button>
+  </section>
+
+  <section class="add-delete-panel">
+    <h3>Add New Employee</h3>
+    <input type="text" id="newName" placeholder="Name">
+    <input type="number" id="newAge" placeholder="Age">
+    <input type="text" id="newDept" placeholder="Department">
+    <input type="text" id="newRole" placeholder="Role">
+    <input type="number" id="newSalary" placeholder="Salary">
+    <button onclick="addEmployee()">Add Employee</button>
+
+    <h3>Delete Employee</h3>
+    <input type="text" id="deleteName" placeholder="Name to delete">
+    <button onclick="deleteEmployee()">Delete</button>
+  </section>
+
+  <section class="employee-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody id="employeeBody"></tbody>
+    </table>
+  </section>
+
+  <section class="result-panel">
+    <p id="averageSalaryResult">Average Salary: -</p>
+    <p id="searchResult">Search Result: -</p>
+    <p id="employeeCount">Total Employees Displayed: -</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

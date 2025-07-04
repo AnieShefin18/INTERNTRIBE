@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #002448;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+#toggleMode {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.controls-panel, .add-delete-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #a7c2c38f;
+}
+
+.add-delete-panel {
+  background-color: #7da2b3;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-delete-panel input {
+  padding: 6px;
+  margin: 2px;
+  width: 200px;
+}
+
+.employee-table {
+  overflow-x: auto;
+  margin: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.result-panel {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
