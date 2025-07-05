@@ -1,0 +1,163 @@
+/* Base styles for body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333333;            /* Dark gray text */
+}
+
+/* Header at the top */
+header {
+  background-color: #002448; /* Deep navy blue */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Toggle button for light/dark mode */
+#toggleMode {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 4px;
+}
+
+/* Main control panel with filters and buttons */
+.panel {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.panel input,
+.panel select {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.panel button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077cc; /* Primary blue for action buttons */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.panel button.reset {
+  background-color: #f39c12; /* Orange warning for reset */
+}
+
+/* Panel to add and delete employees */
+.form-panel {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-panel input {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.form-panel button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.form-panel button.add {
+  background-color: #2ecc71; /* Green for add */
+}
+
+.form-panel button.delete {
+  background-color: #e74c3c; /* Red for delete */
+}
+
+/* Table styling */
+.table-panel {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Result summary section */
+.results-panel {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Optional dark mode override */
+body.dark {
+  background-color: #1e1e1e;
+  color: #dddddd;
+}
+
+body.dark header {
+  background-color: #000c1a;
+}
+
+body.dark .panel,
+body.dark .form-panel,
+body.dark .results-panel {
+  background-color: #2e2e2e;
+}
+
+body.dark table {
+  background-color: #3c3c3c;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #444444;
+  color: white;
+  border: 1px solid #777777;
+}
+
+body.dark button {
+  background-color: #555555;
+}

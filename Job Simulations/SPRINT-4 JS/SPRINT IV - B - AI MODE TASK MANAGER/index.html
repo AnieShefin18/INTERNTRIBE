@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprint-4 Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="at-header">
+    <h1 class="at-title">Task Manager</h1>
+  </header>
+
+  <!-- Controls -->
+  <div class="at-controls">
+    <button id="loadBtn" class="at-btn">Load Tasks</button>
+    <button id="notifyBtn" class="at-btn">Delay Notification</button>
+    <button id="clearAllBtn" class="at-btn at-btn-clear">Clear All</button>
+  </div>
+
+  <!-- Task Creation -->
+  <div class="at-create">
+    <input type="text" id="taskNameInput" placeholder="Enter new task name..." />
+    <button id="addTaskBtn" class="at-btn">Add Task</button>
+  </div>
+
+  <!-- Search & Filter -->
+  <div class="at-filters">
+    <input type="text" id="searchInput" placeholder="Search tasks..." />
+    <div class="at-filter-buttons">
+      <button class="at-btn" data-filter="all">All</button>
+      <button class="at-btn" data-filter="Pending">Pending</button>
+      <button class="at-btn" data-filter="In Progress">In Progress</button>
+      <button class="at-btn" data-filter="Completed">Completed</button>
+    </div>
+  </div>
+
+  <!-- Notification + Tasks -->
+  <div id="notificationArea" class="at-notify-area"></div>
+  <div id="taskArea" class="at-task-area">Loading...</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
